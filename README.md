@@ -46,4 +46,5 @@ Ce logiciel dépend des packages matplotlib et PyQt5. Si vous ne les avez jamais
 ## TEST
 Afin de tester le logiciel un dossier contenant des fichiers vcf nommés correctement vous est proposé. Vous devriez obtenir les mêmes résultats que sur l'image de l'interface ci-dessus avec les paramètres par défaut : 
     
-    main.sh [chemin vers le dossier]/data
+    ./main.sh - p votrePath/data
+En remplacent 'votrePath' par le chemin d'accés au dossier data.
