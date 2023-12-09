@@ -25,7 +25,8 @@ Les fichiers VCF doivent suivre un formatage spécifique pour être traités cor
 Une interface graphique est créée en sortie pour une lecture graphique des résultats. L'utilisateur peut également refaire des analyses avec des paramètres différents directement depuis cette même interface.
 
 
-![image](https://github.com/Hugo-Blvr/systeme_project/assets/152957598/f5c44a9e-dc2b-48cb-836f-30321a2db792)
+![image](https://github.com/Hugo-Blvr/systeme_project/assets/152957598/974d375b-3a17-49b6-a093-1c12d8e10ddd)
+
 1) Chaque échantillon est traité dans un onglet distinct
 2) Permet d'inclure ou non les variants communs sans séquences dans le diagramme (3), par défaut les data_noseq sont inclus
 3) Diagramme montrant le nombre de variants communs entre paire de réplicats
@@ -46,5 +47,5 @@ Ce logiciel dépend des packages matplotlib et PyQt5. Si vous ne les avez jamais
 ## TEST
 Afin de tester le logiciel un dossier contenant des fichiers vcf nommés correctement vous est proposé. Vous devriez obtenir les mêmes résultats que sur l'image de l'interface ci-dessus avec les paramètres par défaut : 
     
-    ./main.sh - p votrePath/data
+    ./main.sh -p votrePath/data
 En remplacent 'votrePath' par le chemin d'accés au dossier data.
