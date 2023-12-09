@@ -11,7 +11,7 @@ système_project est un outil conçu pour la détection et l'analyse de variants
 Le script prend en entrée trois paramètres :
 
 - p ou --path : Chemin du dossier contenant les fichiers VCF à analyser. Tous les dossiers et sous-dossiers seront explorés à partir de ce chemin. Ce paramètre est obligatoire.
-- d --distance : Distance nucléotidique minimale requise (valeur par défaut : 10). Doit être comprise entre 0 et 1 000 000.
+- d ou --distance : Distance nucléotidique minimale requise (valeur par défaut : 10) nécessaire pour considérer des variants comme communs. Doit être comprise entre 0 et 1 000 000.
 - id ou --id_sequence : Seuil d'identité de séquence minimale (valeur par défaut : 0.75) nécessaire pour considérer des variants comme communs. Doit être compris entre 0 et 1.
   
 ## Formatage des noms de fichiers VCF
