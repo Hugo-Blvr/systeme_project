@@ -44,25 +44,3 @@ def decisionNoseq(varsA, varsB):
 
     # Retourner l'élément le plus commun
     return most_common
-
-    
-
-
-# ------------------ TEST ----------------------
-if __name__ == "__main__":
-    a = ['CGT', 'ACTA', 'RRR']
-    b = ["AACG", 'CGTC', 'AAAA']
-
-    for i in a:
-        for j in b:
-            print(f"id_seq entre {i} et {j} : {calcul_id(i,j, id_seq=0.75)}")
-
-    print(decision(a, b, id_seq=0.75))
-
-    a = ['<DUP>']
-    b = ['<DUP>']
-
-    print(decisionNoseq(a, b))
-
-# ------------------ AMELIO ----------------------
-"""Cree un cache pour eviter de calculer deux fois le score pour les meme sequence ?"""
