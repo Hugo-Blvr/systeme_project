@@ -1,6 +1,8 @@
 # À propos de système_project
 
 système_project est un outil conçu pour la détection et l'analyse de variants génétiques communs entre différents fichiers au format VCF (Variant Call Format). Cet outil offre une solution efficace et personnalisable pour comparer les fichiers VCF  à travers une interface graphique interactif. Il facilite l'identification des variants génétiques partagés entre différents réplicats d'un même échantillon, permettant ainsi une meilleure compréhension des données génomiques.
+Les variants sans séquences [&lt;DEL&gt;, &lt;DUP&gt;, &lt;INS&gt;...] sont dissociés des variants avec séquences. 
+
 #### Fonctionnalités
 
 - Détection de variants communs : compare efficacement les fichiers VCF pour identifier les variants communs entre réplicats d'un même échantillon.
@@ -37,7 +39,7 @@ Une interface graphique est créée en sortie pour une lecture graphique des ré
 9) Permet de relancer une nouvelle analyse à partir des paramètres définis par (7) et (8)
 
 ## Dépendances (module)
-Ce logiciel dépend des packages matplotlib et PyQt5. Si vous ne les avez jamais installés copiez ces lignes sur votre terminal :
+Ce logiciel dépend des packages matplotlib et PyQt5. Si vous ne les avez jamais installés copiez ces lignes sur votre terminal pour les installer :
 
     $ sudo apt install python3-matplotlib
     $ sudo apt install python3-pyqt5
@@ -47,3 +49,14 @@ Afin de tester le logiciel un dossier contenant des fichiers .vcf nommés correc
     
     $ ./main.sh -p votrePath/data
 En remplacent 'votrePath' par le chemin d'accés au dossier data.
+
+## Interprétation
+
+### Interprétation de l'Histogramme
+- **Réplicats de Mauvaise Qualité** : Si un réplicat, comme P15-2 dans l'exemple test, montre peu de variants communs avec les autres, cela peut indiquer une qualité inférieure, des erreurs de séquençage, ou des problèmes de manipulation de l'échantillon.
+- **Impact sur l'Analyse Générale** : La faible qualité d'un réplicat peut fausser l'analyse globale, entraînant des conclusions erronées. Il est donc essentiel d'identifier et d'exclure ou de réexaminer de tels échantillons.
+### Interprétation du Pieplot
+- **Répartition des Types de Variants** : Le pieplot fournit une vue d'ensemble de la distribution des différents types de variants. Une répartition équilibrée ou une prédominance de certains types peut indiquer des caractéristiques spécifiques de l'échantillon ou de la condition étudiée.
+- **Importance des Variants Séquencés** : Un pourcentage élevé de variants séquencés est préférable car il offre une meilleure compréhension des modifications génétiques. Cela est particulièrement important dans les études visant à identifier des mutations précises ou des marqueurs génétiques.
+
+En somme, l'interprétation des résultats de système_project nécessite une analyse et une compréhension du contexte biologique. L'utilisateur doit prêter attention à la qualité des réplicats et à la répartition des types de variants pour tirer des conclusions précises et fiables.
