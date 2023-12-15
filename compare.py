@@ -134,22 +134,3 @@ def compare(input_files, distance_pos=10, seq_id=0.75):
                         ligne_repA += 1
                         ligne_repB = 0
     return dico_communVar,dico_communNoSeq
-
-
-# ------------------ TEST ----------------------
-if __name__ == "__main__":
-    input_files = {
-        "P15":["../Data/P15/P15-1.trimed1000.sv_sniffles.vcf",
-        "../Data/P15/P15-2.trimed1000.sv_sniffles.vcf",
-        "../Data/P15/P15-3.trimed1000.sv_sniffles.vcf"],
-       "P30":["../Data/P30/P30-1.trimed1000.sv_sniffles.vcf",
-        "../Data/P30/P30-3.trimed1000.sv_sniffles.vcf",
-        "../Data/P30/P30-2.trimed1000.sv_sniffles.vcf"]}
-
-    a, b = compare(input_files, 1, 1)
-    for echSEQ, echNOSEQ in zip(a, b):
-        print("")
-        print(f"--------------{echSEQ}--------------")
-        for comp, nb, compnoseq, nbnoseq in zip(a[echSEQ].keys(), a[echSEQ].values(), b[echNOSEQ].keys(), b[echNOSEQ].values()):
-            print(f"{comp} : {nb}, {sum(nbnoseq.values())} : {', '.join(f'{i}:{nb_occurence}' for i, nb_occurence in nbnoseq.items())}")
-
