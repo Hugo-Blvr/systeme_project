@@ -54,7 +54,7 @@ En remplacent 'votrePath' par le chemin d'accés au dossier data.
 
 ### Interprétation de l'Histogramme
 - **Réplicats de Mauvaise Qualité** : Si un réplicat, comme P15-2 dans l'exemple test, montre peu de variants communs avec les autres, cela peut indiquer une qualité inférieure, des erreurs de séquençage, ou des problèmes de manipulation de l'échantillon.
-- **Impact sur l'Analyse Générale** : La faible qualité d'un réplicat peut fausser l'analyse globale, entraînant des conclusions erronées. Il est donc essentiel d'identifier et d'exclure ou de réexaminer de tels échantillons.
+- **Impact sur l'Analyse Générale** : La faible qualité d'un réplicat peut fausser l'analyse globale, entraînant des conclusions erronées. Il est donc essentiel d'identifier et d'exclure ou de réexaminer de tels réplicas.
 ### Interprétation du Pieplot
 - **Répartition des Types de Variants** : Le pieplot fournit une vue d'ensemble de la distribution des différents types de variants. Une répartition équilibrée ou une prédominance de certains types peut indiquer des caractéristiques spécifiques de l'échantillon ou de la condition étudiée.
 - **Importance des Variants Séquencés** : Un pourcentage élevé de variants séquencés est préférable car il offre une meilleure compréhension des modifications génétiques. Cela est particulièrement important dans les études visant à identifier des mutations précises ou des marqueurs génétiques.
